@@ -15,39 +15,42 @@ var global = global || this, module = module || undefined;
 (function (app) {
   'use strict';
   var namespace = 'error',
+    factory = function factory() {
+      var error = function () {
+          return error.create.apply(error, [].slice.call(arguments));
+        };
 
-    error = function () {
-      return error.throwCustom.apply(error, [].slice.call(arguments));
+      error.errors = {};
+
+      error.proto = new Error();
+
+      error.create = function create(name, message, code, proto) {
+        var e = Object.create(proto || this.proto);
+
+        // easily identify this as an error object:
+        e.error = true;
+
+        e.name = name;
+        e.message = message;
+
+        if (code) {
+          e.code = code;
+          this.errors[code] = e;
+        }
+
+        return e;
+      };
+
+      error.code = function getByCode(code, message) {
+        var e = this.errors[code] || Object.create(error.proto);
+        e.message = message || e.message || code;
+        return e;
+      };
+
+      return error;
     },
-
-    api = error;
-
-  error.errors = {};
-
-  error.proto = new Error();
-
-  error.create = function create(name, message, code) {
-    var e = Object.create(this.proto);
-
-    e.name = name;
-    e.message = message;
-
-    if (code) {
-      this.errors[code] = e;
-    }
-
-    return e;
-  };
-
-  error.throwCustom = function throwCustom() {
-    throw error.create.apply(error, [].slice.call(arguments));
-  };
-
-  error.throwCode = function throwCode(code, message) {
-    var e = this.errors[code] || Object.create(error.proto);
-    e.message = message || e.message || code;
-    throw e;
-  };
+    api = factory();
+  api.createInstance = factory;
 
   // don't change anything from here down.
   if (app.register) {

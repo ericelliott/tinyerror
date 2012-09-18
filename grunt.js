@@ -28,6 +28,10 @@ module.exports = function(grunt) {
       dist: {
         src: ['src/tinyerror.js'],
         dest: 'dist/tinyerror.js'
+      },
+      test: {
+        src: ['src/tinyerror.js', 'test/testling-src.js'],
+        dest: 'test/testling-tinyerror.js'
       }
     }
   });

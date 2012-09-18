@@ -1,6 +1,6 @@
 {
   "name": "tinyerror",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Easy custom errors in browsers, Node, and Applitude",
   "author": {
     "name": "Eric Elliott",
@@ -8,22 +8,21 @@
   },  
   "main": "./dist/tinyerror.js",
   "keywords": [
-    "module",
-    "modules",
-    "architecture",
+    "error",
+    "errors",
+    "error handling",
     "client",
-    "browser",
-    "events"
+    "browser"
   ],
   "dependencies": {
-    "grunt": "~0.3.x"
+    "grunt": "~0.x.x"
   },
   "scripts": {
     "postinstall": "grunt",
     "test": "grunt"
   },
   "engines": {
-    "node": "~0.8.x",
-    "npm": "~1.1.x"    
+    "node": "~0.x.x",
+    "npm": "~1.x.x"    
   }
 }
