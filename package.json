@@ -19,7 +19,7 @@
   },
   "scripts": {
     "postinstall": "grunt",
-    "test": "grunt"
+    "test": "testling test/testling-src.js"
   },
   "engines": {
     "node": "~0.x.x",
