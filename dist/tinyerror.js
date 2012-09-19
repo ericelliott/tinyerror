@@ -7,6 +7,8 @@
  *
  * Copyright (c) Eric Elliott 2012
  *
+ * With contributions Copyright (c) Tout.com
+ *
  * License: MIT
  **/
 

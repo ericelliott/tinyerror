@@ -29,6 +29,10 @@ module.exports = function(grunt) {
         src: ['src/tinyerror.js'],
         dest: 'dist/tinyerror.js'
       },
+      pretest: {
+        src: ['dist/tinyerror.js'],
+        dest: 'test/tinyerror.js'
+      },
       test: {
         src: ['src/tinyerror.js', 'test/testling-src.js'],
         dest: 'test/testling-tinyerror.js'

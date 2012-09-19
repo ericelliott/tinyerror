@@ -1,6 +1,6 @@
 /*global require */
 var test = require('testling'),
-  error = require('../dist/tinyerror.js');
+  error = require('./tinyerror.js');
 
 test('error properties', function (t) {
   t.equal(typeof error, 'function', 

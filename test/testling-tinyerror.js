@@ -7,6 +7,8 @@
  *
  * Copyright (c) Eric Elliott 2012
  *
+ * With contributions Copyright (c) Tout.com
+ *
  * License: MIT
  **/
 
@@ -64,7 +66,7 @@ var global = global || this, module = module || undefined;
 
 /*global require */
 var test = require('testling'),
-  error = require('../dist/tinyerror.js');
+  error = require('./tinyerror.js');
 
 test('error properties', function (t) {
   t.equal(typeof error, 'function', 
