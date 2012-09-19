@@ -1,2 +1,3 @@
 node_modules
 test/tinyerror.js
+test/testling-tinyerror.js

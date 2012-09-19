@@ -12,6 +12,18 @@
  * License: MIT
  **/
 
+// Polyfill
+(function () {
+  'use strict';
+  if (!Object.create) {
+    Object.create = function (o) {
+      function F() {}
+      F.prototype = o;
+      return new F();
+    };
+  }  
+}());
+
 var global = global || this, module = module || undefined;
 
 (function (app) {
