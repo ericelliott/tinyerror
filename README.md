@@ -60,5 +60,5 @@ A globally shared pool of standard errors is great, but what if you have domain-
 
 # Credit
 
-* Eric Elliott, author of ["Programming JavaScript Applications"](http://shop.oreilly.com/product/0636920024231.do)
+* [Eric Elliott](http://ericleads.com/), author of ["Programming JavaScript Applications" (O'Reilly)](http://shop.oreilly.com/product/0636920024231.do)
 * [Tout.com](http://tout.com/)
