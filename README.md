@@ -44,7 +44,7 @@ The `proto` parameter lets you pass in a custom error prototype. For example, to
       'TypeError.StringExpected', new TypeError());
 
 
-A globally shared pool of standard errors is great, but what if you have domain-specific errors you want to limit to your own module? No problem, just create a new instance of the `error` object. For instance, a media player might need some playback errors:
+A globally shared pool of standard errors is great, but what if you have domain-specific errors you want to limit to your own module? No problem, just create a new instance of the `error` object. For example, a media player might need some playback errors:
 
     var mediaError = error.createInstance(),
       e = mediaError('PlayError', 'Can\'t play media file.', 'PlayError');
