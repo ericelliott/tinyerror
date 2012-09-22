@@ -11,6 +11,7 @@ Here's a simple example:
 Once you have your custom error object, you can do whatever you like with it. Suggestions:
 
 * Pass it into a promise rejection
+* Pass it into an error callback
 * Log it
 * Throw it (use with caution, don't throw in asynchronous code)
 
