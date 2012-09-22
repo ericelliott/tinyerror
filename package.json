@@ -12,7 +12,9 @@
     "errors",
     "error handling",
     "client",
-    "browser"
+    "browser",
+    "exception",
+    "exceptions"
   ],
   "dependencies": {
     "grunt": "~0.x.x"
