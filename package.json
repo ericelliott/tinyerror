@@ -1,6 +1,6 @@
 {
   "name": "tinyerror",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Easy custom errors in browsers, Node, and Applitude",
   "author": {
     "name": "Eric Elliott",
@@ -16,11 +16,10 @@
     "exception",
     "exceptions"
   ],
-  "dependencies": {
+  "devDependencies": {
     "grunt": "~0.x.x"
   },
   "scripts": {
-    "postinstall": "grunt",
     "test": "testling test/testling-tinyerror.js"
   },
   "engines": {
