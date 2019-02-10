@@ -3,6 +3,8 @@ Tinyerror [![Build Status](https://secure.travis-ci.org/dilvie/tinyerror.png)](h
 
 Easy custom errors in browsers, Node, and Applitude
 
+## Status: DEPRECATED - Errors in ES6 can now be subclassed to achieve similar behavior.
+
 Here's a simple example:
 
     var e = error('Error Name', 'Error message');
